@@ -1,15 +1,15 @@
-# qCS 3.0
+# qCS 3.1
 
 Installers are split across three branches — one per platform — so
 each user only downloads the installer for their own OS.
 
 | Platform | Branch | File |
 |---|---|---|
-| macOS (Apple Silicon) | [`mac`](../../tree/mac) | `qCS_3.0_installer_maca64.app/` |
-| Linux (x86_64) | [`linux`](../../tree/linux) | `qCS_3.0_installer_glnxa64.install` |
-| Windows (x86_64) | [`windows`](../../tree/windows) | `qCS_3.0_installer_win64.exe` |
+| macOS (Apple Silicon) | [`mac`](../../tree/mac) | `qCS_3.0_installer_maca64.app/` (3.0 build — no 3.1 macOS build yet) |
+| Linux (x86_64) | [`linux`](../../tree/linux) | `qCS_3.1_installer_glnxa64.install` |
+| Windows (x86_64) | [`windows`](../../tree/windows) | `qCS_3.1_installer_win64.exe` |
 
-User manual: [qCS_3.0_Manual.pdf](qCS_3.0_Manual.pdf).
+User manual: [qCS_3.1_Manual.pdf](qCS_3.1_Manual.pdf).
 
 ---
 
@@ -19,6 +19,9 @@ Each branch is an orphan branch holding a single installer. Use
 `--single-branch` so only that one file is pulled.
 
 ### macOS
+
+The macOS branch still ships the 3.0 build (a 3.1 macOS build has not
+been produced yet).
 
 1. Create a folder in your own user space, then clone the mac branch inside that folder:
    ```bash
@@ -55,14 +58,14 @@ Each branch is an orphan branch holding a single installer. Use
    ```
 2. Mark executable and run:
    ```bash
-   chmod +x qCS_3.0_installer_glnxa64.install
-   ./qCS_3.0_installer_glnxa64.install
+   chmod +x qCS_3.1_installer_glnxa64.install
+   ./qCS_3.1_installer_glnxa64.install
    ```
 3. In the wizard:
    - **License** → Accept.
    - **MATLAB Runtime** → "Use existing", point at your R2023b
      install (e.g. `/usr/local/MATLAB/R2023b`), or pick download mode.
-   - **Install path** → a user-writable path, e.g. `~/qCS_3.0`.
+   - **Install path** → a user-writable path, e.g. `~/qCS_3.1`.
    - Click **Install**.
 4. Launch:
    ```bash
@@ -79,7 +82,7 @@ Each branch is an orphan branch holding a single installer. Use
    ```
 2. Run the installer (or double-click the `.exe`):
    ```powershell
-   .\qCS_3.0_installer_win64.exe
+   .\qCS_3.1_installer_win64.exe
    ```
 3. In the wizard:
    - **License** → Accept.

@@ -30,8 +30,8 @@ The `mac` branch still has the 3.0 build. A 3.2 macOS build has not been release
 
 1. In a folder you own, clone the `mac` branch:
    ```bash
-   git clone --single-branch --branch mac --depth 1 https://github.com/Akulababu/qCS-quantum-Circuit-Studio.git
-   cd qCS-quantum-Circuit-Studio
+   git clone --single-branch --branch mac --depth 1 https://github.com/Akulababu/qCS_quantum_Circuit_Studio.git
+   cd qCS_quantum_Circuit_Studio
    ```
 2. Run the installer:
    ```bash
@@ -49,8 +49,8 @@ The `mac` branch still has the 3.0 build. A 3.2 macOS build has not been release
 
 1. In a folder you own, clone the `linux` branch:
    ```bash
-   git clone --single-branch --branch linux --depth 1 https://github.com/Akulababu/qCS-quantum-Circuit-Studio.git
-   cd qCS-quantum-Circuit-Studio
+   git clone --single-branch --branch linux --depth 1 https://github.com/Akulababu/qCS_quantum_Circuit_Studio.git
+   cd qCS_quantum_Circuit_Studio
    ```
 2. Make the installer executable and run it:
    ```bash
@@ -68,8 +68,8 @@ The `mac` branch still has the 3.0 build. A 3.2 macOS build has not been release
 
 1. In a folder you own, clone the `windows` branch (PowerShell or Git Bash):
    ```powershell
-   git clone --single-branch --branch windows --depth 1 https://github.com/Akulababu/qCS-quantum-Circuit-Studio.git
-   cd qCS-quantum-Circuit-Studio
+   git clone --single-branch --branch windows --depth 1 https://github.com/Akulababu/qCS_quantum_Circuit_Studio.git
+   cd qCS_quantum_Circuit_Studio
    ```
 2. Run the installer, or double-click the `.exe`:
    ```powershell

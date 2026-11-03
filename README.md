@@ -1,4 +1,4 @@
-# qCS 3.2
+# qCS: quantum Circuit Studio 3.2
 
 Installers are split across three branches — one per platform — so
 each user only downloads the installer for their own OS.
@@ -35,8 +35,8 @@ been released yet).
 
 1. Create a folder in your own user space, then clone the mac branch inside that folder:
    ```bash
-   git clone --single-branch --branch mac --depth 1 https://github.com/Akulababu/qCS_3.1.git
-   cd qCS_3.1
+   git clone --single-branch --branch mac --depth 1 https://github.com/Akulababu/qCS-quantum-Circuit-Studio.git
+   cd qCS-quantum-Circuit-Studio
    ```
 2. Run the installer:
    ```bash
@@ -63,8 +63,8 @@ been released yet).
 
 1. Create a folder in your own user space, then clone the linux branch inside that folder:
    ```bash
-   git clone --single-branch --branch linux --depth 1 https://github.com/Akulababu/qCS_3.1.git
-   cd qCS_3.1
+   git clone --single-branch --branch linux --depth 1 https://github.com/Akulababu/qCS-quantum-Circuit-Studio.git
+   cd qCS-quantum-Circuit-Studio
    ```
 2. Mark executable and run:
    ```bash
@@ -87,8 +87,8 @@ been released yet).
 
 1. Create a folder in your own user space, then clone the `windows` branch (PowerShell or Git Bash):
    ```powershell
-   git clone --single-branch --branch windows --depth 1 https://github.com/Akulababu/qCS_3.1.git
-   cd qCS_3.1
+   git clone --single-branch --branch windows --depth 1 https://github.com/Akulababu/qCS-quantum-Circuit-Studio.git
+   cd qCS-quantum-Circuit-Studio
    ```
 2. Run the installer (or double-click the `.exe`):
    ```powershell

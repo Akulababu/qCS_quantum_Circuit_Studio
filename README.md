@@ -4,7 +4,7 @@ Each platform has its own branch with one installer, so you only download the in
 
 | Platform | Branch | File |
 |---|---|---|
-| macOS (Apple Silicon) | [`mac`](../../tree/mac) | `qCS_3.0_installer_maca64.app/` (still the 3.0 build) |
+| macOS (Apple Silicon) | [`mac`](../../tree/mac) | `qCS_3.2_installer_maca64.app/` |
 | Linux (x86_64) | [`linux`](../../tree/linux) | `qCS_3.2_installer_glnxa64.install` |
 | Windows (x86_64) | [`windows`](../../tree/windows) | `qCS_3.2_installer_win64.exe` |
 
@@ -26,7 +26,10 @@ Clone only the branch for your OS with `--single-branch`.
 
 ### macOS
 
-The `mac` branch still has the 3.0 build. A 3.2 macOS build has not been released yet.
+The macOS installer is for Apple silicon Macs (M1 or later) on macOS 13 or later. There is no Intel Mac build. Before you install:
+
+- Install Rosetta 2 with `softwareupdate --install-rosetta`. The bundled JoSIM binary is an Intel program.
+- Stay online. The installer downloads MATLAB Runtime R2023b, about 2.2 GB.
 
 1. In a folder you own, clone the `mac` branch:
    ```bash
@@ -35,14 +38,16 @@ The `mac` branch still has the 3.0 build. A 3.2 macOS build has not been release
    ```
 2. Run the installer:
    ```bash
-   open qCS_3.0_installer_maca64.app
+   open qCS_3.2_installer_maca64.app
    ```
-3. In the wizard, accept the license. For MATLAB Runtime, choose "Use existing" and select `/Applications/MATLAB_R2023b.app` or another MATLAB or MCR R2023b install. The download option fetches about 4 GB instead. Install to a folder you can write to, such as `~/Applications/qCS_3.0`. Do not use `/Applications/`: it needs admin rights, and qCS may fail to write its startup log there. Then click Install.
-4. Launch qCS:
+   The installer is not signed. If macOS blocks it, allow it under System Settings > Privacy & Security, or run `xattr -dr com.apple.quarantine qCS_3.2_installer_maca64.app` and open it again.
+3. In the wizard, accept the license. Install to a folder you can write to whose path has no spaces, such as `~/Applications/qCS_3.2`. Do not use `/Applications/`, which needs admin rights. Then click Install.
+4. Start qCS from Terminal, not by double-clicking it in Finder:
    ```bash
-   cd ~/Applications/qCS_3.0/application
-   ./run_qCS.sh /Applications/MATLAB_R2023b.app
+   cd ~/Applications/qCS_3.2/application
+   ./run_qCS.sh <MATLAB-Runtime-R2023b-folder>
    ```
+   Pass the folder where the installer put MATLAB Runtime R2023b. When it sits next to qCS, that is `~/Applications/qCS_3.2/R2023b`. If you have MATLAB R2023b installed, `/Applications/MATLAB_R2023b.app` also works. The first launch can take a few minutes.
 5. On the Netlist tab, set Simulator Choice to JoSIM. JSIM and JSIM_n are not included on macOS.
 
 ### Linux
